@@ -1,0 +1,29 @@
+#question-container {
+    display: none;
+    max-width: 680px;
+    margin: 20px auto;
+  }
+
+h1 {
+    text-align: center;
+    margin: 40px auto;
+    color: rgb(21, 15, 15);
+  }
+
+.answer {
+    margin: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 1);
+    display: block;
+}
+
+#submit-form {
+  display: none;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#highScores {
+  display: none;
+  max-width: 500px;
+  margin: 20px auto;
+}
