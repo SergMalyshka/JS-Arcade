@@ -285,6 +285,7 @@ function gameStartPrep() {
 
     //other miscellaneous parameters reset back to default values for game start
     //windows 
+    clearInterval(timerInterval);
     secondsLeft = 100;
     currentScore = 0;
     questionContainer.setAttribute("style", "display:block")
