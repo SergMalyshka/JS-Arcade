@@ -280,8 +280,16 @@ function gameStartPrep() {
         correctAnswer: "true"
     };
 
+    var question11 = {
+        content: "What can you store inside an array",
+        wrongAnswer: ["numbers", "Strings", "Objects"],
+        correctAnswer: "All of the above"
+    }
+
+
+
     //make and shuffle a new array containing all questions
-    questions = shuffle([question1, question2, question3, question4, question5, question6, question7, question8, question9, question10]);
+    questions = shuffle([question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11]);
 
     //other miscellaneous parameters reset back to default values for game start
     //windows 
