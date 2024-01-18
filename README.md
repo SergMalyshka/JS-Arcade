@@ -22,7 +22,7 @@ No installation required, page is already live
 ## Usage
 
 Just press the "Start Game" button to start the quiz. If you want to replay the game again just press "Play Again" button
-![screenshot](Assets/screenshot.png)
+![screenshot](Assets/ScreenShot.png)
 
 ## Credits
 
