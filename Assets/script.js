@@ -56,11 +56,12 @@ for (var i = 0; i < buttons.length; i++) {
     })
 }
 
-//high score submission event listener, prevent page from reloading
 submitButton.addEventListener("click", function(event) {
     event.preventDefault();
     highScoreSubmition();
 })
+
+//high score submission event listener, prevent page from reloading
 
 //selects a random question from the pool of questions not yet presented
 function selectRandomQuestion(){
@@ -144,6 +145,7 @@ function endOfGame() {
 
 //local storage and saving high scores logic
 function highScoreSubmition() {
+    gameEndForm.setAttribute("style", "display:none")
     currentPlayer = playerName.value;
 
     //pulling existing scores from local storage
@@ -178,12 +180,14 @@ function renderScores(scores) {
     startButton.textContent = "Play Again"
     //show the high scores div element
     highScoreDisplay.setAttribute("style", "display:block")
+    highScoreList.innerHTML = "";
     //iterate through the high scores array, format the data into a user friendly format, and append it to the ul
     for (var i = 0; i < scores.length; i++) {
         var listItem = document.createElement("li");
         listItem.textContent = scores[i].player + ": " + scores[i].score
         highScoreList.appendChild(listItem);
     }
+
 }
 
 //helper methods
@@ -285,8 +289,6 @@ function gameStartPrep() {
         wrongAnswer: ["numbers", "Strings", "Objects"],
         correctAnswer: "All of the above"
     }
-
-
 
     //make and shuffle a new array containing all questions
     questions = shuffle([question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11]);
