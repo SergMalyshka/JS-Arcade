@@ -145,9 +145,11 @@ function endOfGame() {
 
 //local storage and saving high scores logic
 function highScoreSubmition() {
-    gameEndForm.setAttribute("style", "display:none")
     currentPlayer = playerName.value;
-
+    if (currentPlayer === "") {
+        alert("please enter a valid player name");
+    } else {
+    gameEndForm.setAttribute("style", "display:none")
     //pulling existing scores from local storage
     var highScores = JSON.parse(localStorage.getItem("highScores"));
 
@@ -171,6 +173,9 @@ function highScoreSubmition() {
 
     //display the high scores for the user
     renderScores(highScores);
+    }
+    
+
 }
 
 //dispalying high score for the user
